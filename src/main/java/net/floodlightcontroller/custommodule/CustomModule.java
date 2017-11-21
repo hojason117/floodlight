@@ -105,8 +105,9 @@ public class CustomModule implements IOFMessageListener, IFloodlightModule {
 			instructionList.add(instruct);
 			
 			Match myMatch = my13Factory.buildMatch()
-					.setExact(MatchField.IN_PORT, OFPort.of(1))
+					//.setExact(MatchField.IN_PORT, OFPort.of(1))
 					.setExact(MatchField.ETH_TYPE, EthType.IPv4)
+					//.setExact(MatchField.IN_PHY_PORT,)
 					.build();
 			
 			OFPacketIn packetIn = (OFPacketIn)msg;
@@ -129,5 +130,6 @@ public class CustomModule implements IOFMessageListener, IFloodlightModule {
 		}
 		
 		return Command.CONTINUE;
+		//return Command.STOP;
 	}
 }

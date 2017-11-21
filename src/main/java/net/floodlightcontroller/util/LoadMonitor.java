@@ -146,7 +146,7 @@ public class LoadMonitor implements Runnable {
             }
             return;
         }
-
+        
         loadlevel = LoadLevel.OK;
         itersLoaded = 0;
         return;
