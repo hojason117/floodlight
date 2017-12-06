@@ -169,7 +169,7 @@ public class Controller implements IFloodlightProviderService, IStorageSourceLis
     }
 
     // Load monitor for overload protection
-    protected final boolean overload_drop = Boolean.parseBoolean(System.getProperty("overload_drop", "true"));
+    protected final boolean overload_drop = Boolean.parseBoolean(System.getProperty("overload_drop", "false"));
     protected final LoadMonitor loadmonitor = new LoadMonitor(log);
                 
     /**
